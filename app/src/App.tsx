@@ -17,7 +17,7 @@ const App = () => {
           mx: 8,
           my: 6,
           [theme.breakpoints.down("sm")]: {
-            mx: 4,
+            mx: 2,
             my: 3,
           },
         }}

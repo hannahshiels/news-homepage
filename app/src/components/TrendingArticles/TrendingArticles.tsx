@@ -1,3 +1,4 @@
+@@ -0,0 +1,114 @@
 import image1 from "../../shared/assets/image-retro-pcs.jpg";
 import image2 from "../../shared/assets/image-top-laptops.jpg";
 import image3 from "../../shared/assets/image-gaming-growth.jpg";
@@ -45,24 +46,27 @@ const TrendingArticles = () => {
           }}
         >
           <Box>
-            <img src={val.img} alt={"graphic"} />{" "}
+            <img className="img" src={val.img} alt={"graphic"} />{" "}
           </Box>
           <Box
             sx={{
-              p: 4,
+              px: 4,
               width: "100%",
               [theme.breakpoints.down("sm")]: {
                 width: "100%",
-                p: 2,
+                px: 1,
               },
             }}
           >
             <Typography
-              sx={{ fontWeight: 600, mb: 2 }}
+              sx={{ fontWeight: 600, mb: 2 ,
+                [theme.breakpoints.down("sm")]: {
+                  mb: 1,
+                }, }}
               variant="h4"
               color="neutral.main"
             >
-              {val.num}{" "}
+              {val.num}
             </Typography>
             <Link
               underline={"none"}
@@ -76,11 +80,13 @@ const TrendingArticles = () => {
                 "&:hover": {
                   color: "primary.main",
                 },
+                [theme.breakpoints.down("sm")]: {
+                  fontSize: "1.1rem"
+                },
               }}
               variant="h6"
               color="neutral.darker"
             >
-              {" "}
               {val.title}{" "}
             </Link>
             <Typography color="neutral.dark" variant="body1">

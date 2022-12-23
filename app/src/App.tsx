@@ -2,6 +2,7 @@ import { Box, Stack, useMediaQuery, useTheme } from "@mui/material";
 import CallToAction from "./components/CallToAction/CallToAction";
 import Header from "./components/Header/Header";
 import NewSection from "./components/NewSection/NewSection";
+import TrendingArticles from "./components/TrendingArticles/TrendingArticles";
 
 const App = () => {
   const theme = useTheme();
@@ -33,6 +34,7 @@ const App = () => {
             <NewSection />
           </Box>
         </Box>
+        <TrendingArticles/>
         </Stack>
       </Box>
     </>

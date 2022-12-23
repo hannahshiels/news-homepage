@@ -14,6 +14,15 @@ type Texts = {
     NewSectionSecondArticleDescription: string,
     NewSectionThirdArticleHeading: string,
     NewSectionThirdArticleDescription: string,
+    TrendingArticlesFirstNumber: string,
+    TrendingArticlesFirstTitle: string,
+    TrendingArticlesFirstDescription: string,
+    TrendingArticlesSecondNumber: string,
+    TrendingArticlesSecondTitle: string,
+    TrendingArticlesSecondDescription: string,
+    TrendingArticlesThirdNumber: string,
+    TrendingArticlesThirdTitle: string,
+    TrendingArticlesThirdDescription: string,
 }
 
 const Text:Texts = {
@@ -32,6 +41,15 @@ const Text:Texts = {
     NewSectionSecondArticleDescription: "What are the possible adverse effects of on-demand AI image generation?",
     NewSectionThirdArticleHeading: "Is VC Funding Drying Up?",
     NewSectionThirdArticleDescription: "Private funding by VC firms is down 50% YOY. We take a look at what that means.",
+    TrendingArticlesFirstNumber: "01",
+    TrendingArticlesFirstTitle: "Reviving Retro PCs",
+    TrendingArticlesFirstDescription: "What happens when old PCs are given modern upgrades?",
+    TrendingArticlesSecondNumber: "02",
+    TrendingArticlesSecondTitle: "Top 10 Laptops of 2022",
+    TrendingArticlesSecondDescription: "Our best picks for various needs and budgets.",
+    TrendingArticlesThirdNumber: "03",
+    TrendingArticlesThirdTitle: "The Growth of Gaming",
+    TrendingArticlesThirdDescription: "How the pandemic has sparked fresh opportunities.",
 }
 
 export default Text 

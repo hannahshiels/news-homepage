@@ -1,4 +1,3 @@
-@@ -0,0 +1,114 @@
 import image1 from "../../shared/assets/image-retro-pcs.jpg";
 import image2 from "../../shared/assets/image-top-laptops.jpg";
 import image3 from "../../shared/assets/image-gaming-growth.jpg";

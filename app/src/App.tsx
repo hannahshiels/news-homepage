@@ -1,5 +1,6 @@
 import { Box, Stack, useMediaQuery, useTheme } from "@mui/material";
 import CallToAction from "./components/CallToAction/CallToAction";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import NewSection from "./components/NewSection/NewSection";
 import TrendingArticles from "./components/TrendingArticles/TrendingArticles";
@@ -14,15 +15,16 @@ const App = () => {
     <>
       <Box
         sx={{
+          background: theme.palette.neutral.neutral,
           mx: 8,
           my: 6,
           [theme.breakpoints.down("sm")]: {
-            mx: 4,
+            mx: 2,
             my: 3,
           },
         }}
       >
-        <Stack spacing={4}>
+        <Stack sx={{mb:8}} spacing={4}>
         <Header />
         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
           <Box gridColumn={cols}>
@@ -35,6 +37,7 @@ const App = () => {
           </Box>
         </Box>
         <TrendingArticles/>
+        <Footer />
         </Stack>
       </Box>
     </>

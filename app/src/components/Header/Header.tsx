@@ -75,17 +75,13 @@ const Header = () => {
   return (
     <Box
       sx={{
-        flexGrow: 1,
-        mx: 8,
-        my: 6,
-        [theme.breakpoints.down("sm")]: {
-          mx: 4,
-          my: 3,
-        },
+        flexGrow: 1
       }}
     >
-      <AppBar elevation={0} color="transparent" position="static">
-        <Toolbar>
+      <AppBar elevation={0} color="transparent" position="static"  >
+        <Toolbar sx={{p:0, [theme.breakpoints.up("sm")]: {
+            p: 0,
+          },}} >
           <Box sx={{ flexGrow: 1 }}>
             <img src={logo} alt="logo" />
           </Box>

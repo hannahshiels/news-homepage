@@ -9,7 +9,8 @@ import logo from "../../shared/assets/logo.svg";
 import Text from "../../shared/constants/Text";
 import { useTheme } from "@mui/material/styles";
 import { Drawer, Link, Stack, useMediaQuery } from "@mui/material";
-type Color = "GrayText" | "grey.900";
+
+type Color = "neutral.dark" | "neutral.darker";
 
 const Header = () => {
   const theme = useTheme();
@@ -36,7 +37,11 @@ const Header = () => {
   const renderLinks = (color: Color) => {
     return links.map((link, index) => {
       return (
-        <Link color={color} underline={"none"} sx={{ cursor: "pointer", px: 2 }} key={index}>
+        <Link href="#" color={color} underline={"none"} sx={{px: 2,  transition: theme.transitions.create(["color"], {
+      duration: theme.transitions.duration.standard,
+    }),"&:hover": {
+          color: "secondary.main"
+        } }} key={index}>
           {link}
         </Link>
       );
@@ -47,7 +52,7 @@ const Header = () => {
     return (
       <React.Fragment>
         <IconButton aria-label="open menu" onClick={handleDrawerOpen}>
-          <MenuIcon fontSize="large" sx={{ color: "grey.900" }} />
+          <MenuIcon fontSize="large" sx={{ color: "neutral.darker" }} />
         </IconButton>
         <Drawer
           elevation={0}
@@ -61,10 +66,10 @@ const Header = () => {
               aria-label="close menu"
               onClick={handleDrawerClose}
             >
-              <CloseIcon fontSize="large" sx={{ color: "grey.900" }} />
+              <CloseIcon fontSize="large" sx={{ color: "neutral.darker" }} />
             </IconButton>
             <Stack sx={{ mt: 6, pr: 10 }} spacing={2}>
-              {renderLinks("grey.900")}
+              {renderLinks("neutral.darker")}
             </Stack>
           </Box>
         </Drawer>
@@ -85,7 +90,7 @@ const Header = () => {
           <Box sx={{ flexGrow: 1 }}>
             <img src={logo} alt="logo" />
           </Box>
-          {matches ? renderMenuMobile() : <> {renderLinks("GrayText")} </>}
+          {matches ? renderMenuMobile() : <> {renderLinks("neutral.dark")} </>}
         </Toolbar>
       </AppBar>
     </Box>

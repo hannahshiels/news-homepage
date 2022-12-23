@@ -26,14 +26,14 @@ const CallToAction = () => {
       <Box sx={{ py: 2, [theme.breakpoints.down("sm")]: {
             p: 0,
           } }} gridColumn={cols}>
-        <Typography sx={{ fontWeight: "700" }} variant="h2">
+        <Typography color="neutral.darker"  sx={{ fontWeight: "700" }} variant="h2">
           {Text.CallToActionHeading}
         </Typography>
       </Box>
       <Box sx={{ py: 2, px: 4, [theme.breakpoints.down("sm")]: {
             p: 0,
           } }} gridColumn={cols}>
-        <Typography variant="body1">{Text.CallToActionDescription} </Typography>
+        <Typography color="neutral.dark" variant="body1">{Text.CallToActionDescription} </Typography>
         <Button
           size="large"
           disableElevation
@@ -42,7 +42,7 @@ const CallToAction = () => {
             letterSpacing: "3px",
             mt: 4,
             borderRadius: 0,
-            fontWeight: "600",
+            fontWeight: "600", 
           }}
           variant="contained"
         >

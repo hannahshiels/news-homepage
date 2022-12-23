@@ -1,6 +1,7 @@
 import {
   Box,
   Divider,
+  Link,
   Stack,
   Typography,
   useTheme,
@@ -28,13 +29,19 @@ const NewSection = () => {
       return (
         <Box key={key}>
           <Box sx={{py:2}}>
-            <Typography
-              sx={{ fontWeight: 600 }}
+            <Link href="#f" underline="none"
+              sx={{ fontWeight: 600, 
+                transition: theme.transitions.create(["color"], {
+                  duration: theme.transitions.duration.standard,
+                }),
+                "&:hover": {
+                  color: "secondary.main",
+                }, }}
               color="neutral.neutral"
               variant="h6"
             >
               {val.heading}
-            </Typography>
+            </Link>
             <Typography color="neutral.main" variant="body1">
               {val.description}
             </Typography>

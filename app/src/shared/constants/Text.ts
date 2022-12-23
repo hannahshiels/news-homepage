@@ -24,8 +24,11 @@ type Texts = {
     TrendingArticlesThirdTitle: string,
     TrendingArticlesThirdDescription: string,
     FooterChallengeBy: string,
+    FooterChallengeByFM: string,
     FooterChallengeByLink: string,
     FooterCodedBy: string,
+    FooterCodedByH: string,
+    FooterCodedByLink: string,
 }
 
 const Text:Texts = {
@@ -53,9 +56,12 @@ const Text:Texts = {
     TrendingArticlesThirdNumber: "03",
     TrendingArticlesThirdTitle: "The Growth of Gaming",
     TrendingArticlesThirdDescription: "How the pandemic has sparked fresh opportunities.",
-    FooterChallengeBy: "Challenge by Frontend Mentor",
-    FooterChallengeByLink: "https://www.frontendmentor.io?ref=challenge",
-    FooterCodedBy: "Coded by Hannah ❤",
+    FooterChallengeBy: "Challenge by ",
+    FooterChallengeByFM: "Frontend Mentor",
+    FooterChallengeByLink: "https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl",
+    FooterCodedBy: "Coded by ",
+    FooterCodedByH: "Hannah",
+    FooterCodedByLink: "https://github.com/hannahshiels",
 }
 
 export default Text 

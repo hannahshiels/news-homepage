@@ -15,6 +15,7 @@ const App = () => {
     <>
       <Box
         sx={{
+          background: theme.palette.neutral.neutral,
           mx: 8,
           my: 6,
           [theme.breakpoints.down("sm")]: {
@@ -23,7 +24,7 @@ const App = () => {
           },
         }}
       >
-        <Stack spacing={4}>
+        <Stack sx={{mb:8}} spacing={4}>
         <Header />
         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
           <Box gridColumn={cols}>

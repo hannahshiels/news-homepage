@@ -1,11 +1,13 @@
 import { Box, Stack, useMediaQuery, useTheme } from "@mui/material";
 import CallToAction from "./components/CallToAction/CallToAction";
 import Header from "./components/Header/Header";
+import NewSection from "./components/NewSection/NewSection";
 
 const App = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   const cols = matches ? "span 12" : "span 9"
+  const colsNewSection = matches ? "span 12" : "span 3"
 
   return (
     <>
@@ -24,6 +26,11 @@ const App = () => {
         <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
           <Box gridColumn={cols}>
             <CallToAction />
+          </Box>
+          <Box sx={{[theme.breakpoints.down("sm")]: {
+            mt: 4,
+          }}} gridColumn={colsNewSection}>
+            <NewSection />
           </Box>
         </Box>
         </Stack>

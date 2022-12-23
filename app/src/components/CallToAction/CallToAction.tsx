@@ -46,7 +46,7 @@ const CallToAction = () => {
           }}
           variant="contained"
         >
-          {Text.CallToActionBtn}{" "}
+          {Text.CallToActionBtn}
         </Button>
       </Box>
     </Box>

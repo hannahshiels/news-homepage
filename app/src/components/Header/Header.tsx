@@ -41,7 +41,9 @@ const Header = () => {
       duration: theme.transitions.duration.standard,
     }),"&:hover": {
           color: "secondary.main"
-        } }} key={index}>
+        },"&:last-child": {
+          pr: 0
+        }  }} key={index}>
           {link}
         </Link>
       );

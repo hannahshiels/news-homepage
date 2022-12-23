@@ -1,5 +1,6 @@
 import { Box, Stack, useMediaQuery, useTheme } from "@mui/material";
 import CallToAction from "./components/CallToAction/CallToAction";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import NewSection from "./components/NewSection/NewSection";
 import TrendingArticles from "./components/TrendingArticles/TrendingArticles";
@@ -35,6 +36,7 @@ const App = () => {
           </Box>
         </Box>
         <TrendingArticles/>
+        <Footer />
         </Stack>
       </Box>
     </>

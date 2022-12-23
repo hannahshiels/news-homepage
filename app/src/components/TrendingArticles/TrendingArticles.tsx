@@ -2,7 +2,7 @@ import image1 from "../../shared/assets/image-retro-pcs.jpg";
 import image2 from "../../shared/assets/image-top-laptops.jpg";
 import image3 from "../../shared/assets/image-gaming-growth.jpg";
 import Text from "../../shared/constants/Text";
-import { Box, Link, Stack, Typography, useTheme } from "@mui/material";
+import { Box, Link, Typography, useTheme } from "@mui/material";
 
 const TrendingArticles = () => {
   const theme = useTheme();
@@ -86,11 +86,10 @@ const TrendingArticles = () => {
               variant="h6"
               color="neutral.darker"
             >
-              {val.title}{" "}
+              {val.title}
             </Link>
             <Typography color="neutral.dark" variant="body1">
-              {" "}
-              {val.desc}{" "}
+              {val.desc}
             </Typography>
           </Box>
         </Box>

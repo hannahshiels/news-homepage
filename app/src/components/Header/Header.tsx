@@ -36,7 +36,7 @@ const Header = () => {
   const renderLinks = (color: Color) => {
     return links.map((link, index) => {
       return (
-        <Link color={color} underline={"none"} sx={{ px: 2 }} key={index}>
+        <Link color={color} underline={"none"} sx={{ cursor: "pointer", px: 2 }} key={index}>
           {link}
         </Link>
       );

@@ -7,7 +7,7 @@ import TrendingArticles from "./components/TrendingArticles/TrendingArticles";
 
 const App = () => {
   const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.down("sm"));
+  const matches = useMediaQuery(theme.breakpoints.down("lg"));
   const cols = matches ? "span 12" : "span 9"
   const colsNewSection = matches ? "span 12" : "span 3"
 
@@ -18,7 +18,7 @@ const App = () => {
           background: theme.palette.neutral.neutral,
           mx: 8,
           my: 6,
-          [theme.breakpoints.down("sm")]: {
+          [theme.breakpoints.down("md")]: {
             mx: 2,
             my: 3,
           },

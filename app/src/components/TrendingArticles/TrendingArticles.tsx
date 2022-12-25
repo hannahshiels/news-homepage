@@ -34,14 +34,15 @@ const TrendingArticles = () => {
           key={key}
           sx={{
             display: "flex",
-            width: "30%",
-            [theme.breakpoints.down("sm")]: {
-              width: "100%",
+            width: "33%",   [theme.breakpoints.down("lg")]: {
+              width: "40%",
               mb: 4,
               "&:last-child": {
                 mb: 0,
               },
-            },
+            },[theme.breakpoints.down("md")]: {
+              width: "100%"
+            }
           }}
         >
           <Box>
@@ -49,7 +50,7 @@ const TrendingArticles = () => {
           </Box>
           <Box
             sx={{
-              px: 4,
+              px: 2,
               width: "100%",
               [theme.breakpoints.down("sm")]: {
                 width: "100%",

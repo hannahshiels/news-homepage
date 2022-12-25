@@ -12,10 +12,12 @@ import Text from "../../shared/constants/Text";
 const CallToAction = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
-  const cols = matches ? "span 12" : "span 6"
-
   return (
-    <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
+    <Box sx={{[theme.breakpoints.down("lg")]: {
+    textAlign:"center"
+    }, [theme.breakpoints.down("sm")]: {
+      textAlign:"left"
+      }}}>
       <Box gridColumn="span 12">
         {matches ? (
           <img className="img" alt="graphic" src={imageMobile} />
@@ -23,16 +25,22 @@ const CallToAction = () => {
           <img className="img" alt="graphic" src={imageDesktop} />
         )}
       </Box>
+      <Box sx={{display:"flex", [theme.breakpoints.down("lg")]: {
+            flexDirection:"column"
+          }}}>
       <Box sx={{ py: 2, [theme.breakpoints.down("sm")]: {
-            p: 0,
-          } }} gridColumn={cols}>
+            p: 0,pt:2
+          } }} >
         <Typography color="neutral.darker"  sx={{ fontWeight: "700" }} variant="h2">
           {Text.CallToActionHeading}
         </Typography>
       </Box>
-      <Box sx={{ py: 2, px: 4, [theme.breakpoints.down("sm")]: {
+
+      <Box sx={{ py: 2, px: 4, [theme.breakpoints.down("lg")]: {
+            p: 0,py:2
+          } , [theme.breakpoints.down("sm")]: {
             p: 0,
-          } }} gridColumn={cols}>
+          }}}>
         <Typography color="neutral.dark" variant="body1">{Text.CallToActionDescription} </Typography>
         <Button
           size="large"
@@ -48,6 +56,7 @@ const CallToAction = () => {
         >
           {Text.CallToActionBtn}
         </Button>
+      </Box>
       </Box>
     </Box>
   );

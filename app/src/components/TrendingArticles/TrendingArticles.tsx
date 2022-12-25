@@ -41,11 +41,7 @@ const TrendingArticles = () => {
                 mb: 0,
               },
             },[theme.breakpoints.down("md")]: {
-              width: "100%",
-              mb: 4,
-              "&:last-child": {
-                mb: 0,
-              },
+              width: "100%"
             }
           }}
         >

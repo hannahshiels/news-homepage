@@ -15,7 +15,6 @@ const App = () => {
     <>
       <Box
         sx={{
-          background: theme.palette.neutral.neutral,
           mx: 8,
           my: 6,
           [theme.breakpoints.down("md")]: {
